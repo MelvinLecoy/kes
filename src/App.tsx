@@ -8,9 +8,9 @@ function App() {
       <HeaderNavbar />
       <section id='main' className='snap-start'><Main /></section>
       <section id='about' className='snap-center'><About /></section>
-      <section id='exp' className='snap-center'><Experience /></section>
+      <section id='experience' className='snap-center'><Experience /></section>
       <section id='skills' className='snap-start'><Skills /></section>
-      <section id='projs' className='snap-start'><Projects /></section>
+      <section id='projects' className='snap-start'><Projects /></section>
       <section id='contact' className='snap-start'><Contact /></section>
     </div>
   );

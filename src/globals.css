@@ -3,10 +3,12 @@
 @tailwind utilities;
 
 @layer components {
+     .fs0 {@apply flex-shrink-0}
      .f {@apply flex}
      .fr {@apply flex-row}
      .fc {@apply flex-col}
      .fic {@apply flex items-center}
+     .fis {@apply flex items-start}
      .ficjc {@apply flex items-center justify-center}
 
      .ic {@apply items-center}
@@ -14,10 +16,22 @@
 
      .jc {@apply justify-center}
      .jb {@apply justify-between}
+     .je {@apply justify-evenly}
+
+     .tc {@apply text-center}
+     .tl {@apply text-left}
+     .tr {@apply text-right}
 
      .cp {@apply cursor-pointer}
 
-     
+
+     .rela {@apply relative}
+     .abso {@apply absolute}
+
+     /* BgSquare.tsx */
+     .bgSquare {
+          @apply absolute border border-[#333333] mt-52 
+     }
      .heroBtn {
         @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs 
                 tracking-widest text-gray-500 transition-all
