@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+     .f {@apply flex}
+     .fr {@apply flex-row}
+     .fc {@apply flex-col}
+     .fic {@apply flex items-center}
+     .ficjc {@apply flex items-center justify-center}
+
+     .ic {@apply items-center}
+     .is {@apply items-start}
+
+     .jc {@apply justify-center}
+     .jb {@apply justify-between}
+
+     .cp {@apply cursor-pointer}
+
+     
+     .heroBtn {
+        @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs 
+                tracking-widest text-gray-500 transition-all
+                hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40
+     }
+     .pageDiv {
+          @apply h-screen relative flex flex-col items-center justify-evenly mx-auto text-center
+     }
+     .titleStyle {
+          @apply absolute top-28 uppercase tracking-[20px] text-gray-500 text-3xl
+     }
+     .titleExp {
+          @apply absolute uppercase tracking-[20px] text-gray-500 text-2xl
+     }
+     .orangeUnderline {
+          @apply underline decoration-[#F7AB0A]/50
+     }
+     .hfourStyle {
+          @apply text-4xl font-semibold text-center
+     }
+     .contactInput {
+          @apply outline-none bg-slate-400/10 rounded-sm px-6 py-4 border-[#242424] border-b
+                    text-gray-500 placeholder-gray-500 transition-all
+                    focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40
+     }
+     .scrollBar {
+          @apply scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80
+     }
+}
