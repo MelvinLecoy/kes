@@ -10,7 +10,7 @@ export default function About() {
         <h3 className='titleStyle'>About</h3>
         <motion.img initial={init} whileInView={end} transition={{duration: 1.2,}} viewport={{once: true,}}
             src={AboutPic} alt="About Page" className="h-60 w-60 md:w-[350px] md:h-[450px] xl:w-[400px] xl:h-[500px]
-                                                fs0 rela top-20 md:-top-3 rounded-full md:rounded-lg object-cover" />
+                                                        fs0 rela top-20 md:-top-3 rfull md:rlg objcov" />
         <div className="space-y-10 px-0 md:px-10">
             <h4 className="font-semibold underline text-5xl xl:text-[50px]">Kestino (He/Him)</h4>
             <ul className="list-disc ml-4 tl text-[18px] xl:text-[23px]">

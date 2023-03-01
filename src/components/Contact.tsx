@@ -19,17 +19,17 @@ function Contact({}: Props) {
     <div className='pageDiv md:tl md:fr max-w-7xl px-10'>
       <h3 className='titleStyle'>Contact</h3>
       <div className='f fc space-y-10'>
-        <h4 className='hfourStyle'>I've got just what you need. <span className='orangeUnderline'>Let's talk</span></h4>
+        <h4 className='hfourStyle'>I've got just what you want. <span className='orangeUnderline'>Let's talk</span></h4>
         <div className="space-y-10">
-          <div className="ficjc space-x-5">
+          <div className="fjcic space-x-5">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-2xl">+1 7818796187</p>
           </div>
-          <div className="ficjc space-x-5">
+          <div className="fjcic space-x-5">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-2xl">kestino@umich.edu</p>
           </div>
-          <div className="ficjc space-x-5">
+          <div className="fjcic space-x-5">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-2xl">413 E Huron St, Ann Arbor MI</p>
           </div>
@@ -41,7 +41,7 @@ function Contact({}: Props) {
           </div>
           <input className="contactInput" type="text" placeholder="Subject" {...register('subject')} />
           <textarea className="contactInput" placeholder="Message" {...register('message')} />
-          <button type="submit" className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg">Submit</button>
+          <button type="submit" className="bg-[#F7AB0A] py-5 px-10 rmd text-black font-bold text-lg">Submit</button>
         </form>
       </div>
     </div>

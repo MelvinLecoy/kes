@@ -7,9 +7,9 @@ function Main() {
                                     "const [hobby, setHobby] = useState('Pool');", "<ButLovesWebDevMore />"];
   const [text, count] = useTypewriter({words: personalTraits, loop: true, delaySpeed: 2000,});
   return (
-    <div className="ficjc fc h-screen space-y-8 text-center overflow-hidden">
+    <div className="fjcic fc hs space-y-8 tc ofh">
         <BgSquare />
-        <img src={Profile} alt="pfp" className="rela h-36 w-36 mx-auto mt-20 rounded-lg object-cover" />
+        <img src={Profile} alt="pfp" className="rela h-36 w-36 mx-auto mt-20 rlg objcov" />
         <div className="z-20">
             <h2 className="uppercase text-gray-500 pb-2 tracking-[15px] text-sm lg:text-lg">Software Engineer</h2>
             <h1 className="text-[26px] md:text-[32px] lg:text-[44px] font-semibold px-10">

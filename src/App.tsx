@@ -3,15 +3,14 @@ import { HeaderNavbar, Main, About, Experience, Skills, Projects, Contact } from
 
 function App() {
   return (
-    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory
-                    overflow-y-scroll overflow-x-hidden z-0 scrollBar'>
+    <div className='bg-[rgb(36,36,36)] hs text-white snapy snapman overflow-y-scroll overflow-x-hidden z-0 scrollBar'>
       <HeaderNavbar />
-      <section id='main' className='snap-start'><Main /></section>
-      <section id='about' className='snap-center'><About /></section>
-      <section id='experience' className='snap-center'><Experience /></section>
-      <section id='skills' className='snap-start'><Skills /></section>
-      <section id='projects' className='snap-start'><Projects /></section>
-      <section id='contact' className='snap-start'><Contact /></section>
+      <section id='main' className='snaps'><Main /></section>
+      <section id='about' className='snapc'><About /></section>
+      <section id='experience' className='snapc'><Experience /></section>
+      <section id='skills' className='snaps'><Skills /></section>
+      <section id='projects' className='snaps'><Projects /></section>
+      <section id='contact' className='snaps'><Contact /></section>
     </div>
   );
 }

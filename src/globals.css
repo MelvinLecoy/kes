@@ -3,57 +3,68 @@
 @tailwind utilities;
 
 @layer components {
+     /* Position */
+     .rela {@apply relative} .abso {@apply absolute}
+     /* Display */
+     .blk {@apply block} .il {@apply inline}
+     .ilb {@apply inline-block} .ilf {@apply inline-flex} .ilg {@apply inline-grid}
+
+     /* Flex related */
      .fs0 {@apply flex-shrink-0}
-     .f {@apply flex}
-     .fr {@apply flex-row}
-     .fc {@apply flex-col}
-     .fic {@apply flex items-center}
-     .fis {@apply flex items-start}
-     .ficjc {@apply flex items-center justify-center}
+     .f {@apply flex} .fr {@apply flex-row} .fc {@apply flex-col}
+     .fjcic {@apply flex justify-center items-center}
 
-     .ic {@apply items-center}
-     .is {@apply items-start}
+     .js {@apply justify-start} .je {@apply justify-end} .jc {@apply justify-center} .jb {@apply justify-between} .jeven {@apply justify-evenly} .jard {@apply justify-around}  /* Primary axis */
+     .fjs {@apply flex justify-start} .fje {@apply flex justify-end} .fjc {@apply flex justify-center} .fjb {@apply flex justify-between} .fjeven {@apply flex justify-evenly} .fjard {@apply flex justify-around}
+     .is {@apply items-start} .ie {@apply items-end} .ic {@apply items-center} .istretch {@apply items-stretch}  /* Secondary axis */
+     .fis {@apply flex items-start} .fie {@apply flex items-end} .fic {@apply flex items-center} .fistretch {@apply flex items-stretch}
 
-     .jc {@apply justify-center}
-     .jb {@apply justify-between}
-     .je {@apply justify-evenly}
+     .tl {@apply text-left} .tr {@apply text-right} .tc {@apply text-center}
 
-     .tc {@apply text-center}
-     .tl {@apply text-left}
-     .tr {@apply text-right}
+     /* Grid related */
+
+     /* Overflow ??????????????? (DOESNT WORK) */
+     .ofh {@apply overflow-hidden}
+     .ofxh {@apply overflow-x-hidden}
+     .ofyh {@apply overflow-y-hidden}
+     .ofxs {@apply overflow-x-scroll} .ofys {@apply overflow-y-scroll}
+     /* Image Related */
+     /* Border Radius */ .rfull {@apply rounded-full} .rsm {@apply rounded-sm} .rmd {@apply rounded-md} .rlg {@apply rounded-lg}
+     /* Object fit    */ .objcov {@apply object-cover} .objcont {@apply object-contain} .objfill {@apply object-fill}/*Stretch img*/
+
+     /* Screen */
+     .hs {@apply h-screen} .ws {@apply w-screen}
+
+     /* Opacity */
+     .opac0 {@apply opacity-0} .opac5 {@apply opacity-5} .opac10 {@apply opacity-10} .opac20 {@apply opacity-20} .opac25 {@apply opacity-25}
+     .opac30 {@apply opacity-30} .opac40 {@apply opacity-40} .opac50 {@apply opacity-50} .opac60 {@apply opacity-60} .opac70 {@apply opacity-70}
+     .opac75 {@apply opacity-75} .opac80 {@apply opacity-80} .opac90 {@apply opacity-90} .opac95 {@apply opacity-95} .opac100 {@apply opacity-100}
+
+     /* Snap */
+     .snapx {@apply snap-x} .snapy {@apply snap-y}
+     .snaps {@apply snap-start} .snape {@apply snap-end} .snapc {@apply snap-center}
+     .snapman {@apply snap-mandatory}
+
 
      .cp {@apply cursor-pointer}
 
+}
 
-     .rela {@apply relative}
-     .abso {@apply absolute}
-
+@layer components {
      /* BgSquare.tsx */
-     .bgSquare {
-          @apply absolute border border-[#333333] mt-52 
-     }
+     .bgSquare {@apply abso border border-[#333333] mt-52}
      .heroBtn {
-        @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs 
+        @apply px-6 py-2 border border-[#242424] rfull uppercase text-xs 
                 tracking-widest text-gray-500 transition-all
                 hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40
      }
-     .pageDiv {
-          @apply h-screen relative flex flex-col items-center justify-evenly mx-auto text-center
-     }
-     .titleStyle {
-          @apply absolute top-28 uppercase tracking-[20px] text-gray-500 text-3xl
-     }
-     .titleExp {
-          @apply absolute uppercase tracking-[20px] text-gray-500 text-2xl
-     }
-     .orangeUnderline {
-          @apply underline decoration-[#F7AB0A]/50
-     }
-     .hfourStyle {
-          @apply text-4xl font-semibold text-center
-     }
+     .pageDiv {@apply hs rela fic fc jeven mx-auto tc}
+     .titleStyle {@apply abso top-28 uppercase tracking-[20px] text-gray-500 text-3xl}
+     .titleExp {@apply abso uppercase tracking-[20px] text-gray-500 text-2xl}
+     .orangeUnderline {@apply underline decoration-[#F7AB0A]/50}
+     .hfourStyle {@apply text-4xl font-semibold text-center}
      .contactInput {
-          @apply outline-none bg-slate-400/10 rounded-sm px-6 py-4 border-[#242424] border-b
+          @apply outline-none bg-slate-400/10 rsm px-6 py-4 border-[#242424] border-b
                     text-gray-500 placeholder-gray-500 transition-all
                     focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40
      }
