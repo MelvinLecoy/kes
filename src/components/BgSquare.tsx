@@ -6,7 +6,7 @@ export default function BgSquare() {
   const rad = ["20%", "20%", "50%", "80%", "20%"];
   const animation = {scale: scale, opacity: opacity, borderRadius: rad};
   return (
-    <motion.div initial={{opacity: 0,}} animate={animation} transition={{duration: 2.5,}} className="relative fjcic">
+    <motion.div initial={{opacity: 0,}} animate={animation} transition={{duration: 2.5,}} className="relative fjcic z-20">
         <div className="bgSquare h-[200px] w-[200px] animate-ping" />
         <div className="bgSquare h-[300px] w-[300px] opac30" />
         <div className="bgSquare h-[500px] w-[500px] opac70" />

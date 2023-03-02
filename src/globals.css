@@ -72,3 +72,23 @@
           @apply scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80
      }
 }
+
+@layer components {
+     .mouseTrailer {
+          background: linear-gradient(to right, aquamarine, mediumpurple);
+          height: 30px;
+          position: fixed;
+          aspect-ratio: 1;
+          left: 50%;
+          top: 50%;
+          translate: -50% -50%;
+          border-radius: 50%;
+          animation: rotBlob 20s infinite;
+          overflow: hidden;
+     }
+     @keyframes rotBlob {
+          from {rotate: 0deg;}
+          50% {scale: 1 1.5;}
+          to {rotate: 360deg;}
+     }
+}

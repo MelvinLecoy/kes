@@ -16,7 +16,7 @@ function Contact({}: Props) {
     window.location.href = `mailto:kestino@umich.edu?subject=${fData.subject}&body=Hi, I am ${fData.name}. ${fData.message} (${fData.email})`;
   };
   return (
-    <div className='pageDiv md:tl md:fr max-w-7xl px-10'>
+    <div className='pageDiv md:tl md:fr max-w-7xl px-10 z-20'>
       <h3 className='titleStyle'>Contact</h3>
       <div className='f fc space-y-10'>
         <h4 className='hfourStyle'>I've got just what you want. <span className='orangeUnderline'>Let's talk</span></h4>

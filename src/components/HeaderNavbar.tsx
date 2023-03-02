@@ -8,7 +8,7 @@ function HeaderNavbar() {
     const Linkedin: string = "https://www.linkedin.com/in/kestinoktlau/";
     const Spotify: string = "https://open.spotify.com/user/uncledrewchrislau";
   return (
-    <header className="fis jb sticky top-0 p-5 max-w-7xl mx-auto z-20 xl:ic">
+    <header className="fis jb sticky top-0 p-5 max-w-7xl mx-auto z-50 xl:ic">
         <motion.div initial={rInit} animate={end} transition={{duration: 1.5,}} className="fic fr">
             <SocialIcon url={Github} target="_blank" fgColor="gray" bgColor="transparent" />
             <SocialIcon url={Linkedin} target="_blank" fgColor="gray" bgColor="transparent" />
