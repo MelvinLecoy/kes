@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 import AboutPic from "../assets/About.png";
 
 export default function About() {
-    const init = {x: -200, opacity: 0,};
-    const end = {x: 0, opacity: 1,};
+    const init = {x: -200, opacity: 0,}, end = {x: 0, opacity: 1,};
   return (
     <motion.div initial={{opacity: 0,}} whileInView={{opacity: 1,}} transition={{duration: 1.5}}
                 className='pageDiv md:fr md:tl max-w-7xl px-10 z-20'>
