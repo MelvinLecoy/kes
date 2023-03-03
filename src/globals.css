@@ -12,7 +12,11 @@
      /* Flex related */
      .fs0 {@apply flex-shrink-0}
      .f {@apply flex} .fr {@apply flex-row} .fc {@apply flex-col}
-     .fjcic {@apply flex justify-center items-center}
+     .fjcic {@apply flex justify-center items-center} .fjcis {@apply flex justify-center items-start} .fjcie {@apply flex justify-center items-end}
+     .fjsic {@apply flex justify-start items-center} .fjsis {@apply flex justify-start items-start} .fjsie {@apply flex justify-start items-end}
+     .fjeic {@apply flex justify-end items-center} .fjeis {@apply flex justify-end items-start} .fjeie {@apply flex justify-end items-end}
+     .fjbic {@apply flex justify-between items-center} .fjbis {@apply flex justify-between items-start} .fjbie {@apply flex justify-between items-end}
+
 
      .js {@apply justify-start} .je {@apply justify-end} .jc {@apply justify-center} .jb {@apply justify-between} .jeven {@apply justify-evenly} .jard {@apply justify-around}  /* Primary axis */
      .fjs {@apply flex justify-start} .fje {@apply flex justify-end} .fjc {@apply flex justify-center} .fjb {@apply flex justify-between} .fjeven {@apply flex justify-evenly} .fjard {@apply flex justify-around}
@@ -47,6 +51,7 @@
 
 
      .cp {@apply cursor-pointer}
+     .pen {@apply pointer-events-none}
 
 }
 
@@ -90,5 +95,55 @@
           from {rotate: 0deg;}
           50% {scale: 1 1.5;}
           to {rotate: 360deg;}
+     }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Ephesis');
+@layer components {
+     .linksize {
+          font-family: 'Ephesis', cursive;   /* font-family: 'StudioFeixenSansEdgy', 'sans-serif'; */
+          /* border: 1px solid rgba(255, 255, 255, 0.5); */
+          @apply text-[21px] md:text-[24px] lg:text-[27px] xl:text-[30px]
+                 w-[173px] min-[820px]:w-[200px] min-[910px]:w-[220px] lg:w-[240px] xl:w-[315px] 2xl:w-[440px]
+     }
+     /* @media only screen and (min-width: 820px) {
+          .linksize {width: 200px;}
+     } */
+     .link {
+          position: relative;
+          padding: 5px 20px;          
+          @apply h-[40px] md:h-[50px] lg:h-[60px] xl:h-[67px] 2xl:h-[80px] border-t-2
+     }
+
+     :root {
+          --g1: rgba(80, 145, 116, 0.5);
+          /* --g1.5: rgba(101, 189, 123, 0.9); */
+          --g2: rgba(141, 255, 168, 0.9);
+          --g3: rgba(228, 254, 62, 0.9);
+      }
+     .link:before {
+          content: "";
+          top: 0px;
+          height: 100%;
+          width: 0%;
+          position: absolute;
+     }
+     .link:hover:before {
+          width: 100%;
+          transition: width 600ms ease;
+     }
+     .llink:before {
+          left: 0px;
+          background: linear-gradient(
+               to right, transparent, 
+               var(--g1), var(--g2), var(--g3)
+          );
+     }
+     .rlink:before {
+          right: 0px;
+          background: linear-gradient(
+               to left, transparent, 
+               var(--g1), var(--g2), var(--g3)
+          );
      }
 }

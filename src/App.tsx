@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div onMouseMove={trailing} className='bg-[rgb(29,29,31)] rela'>
-      <div className='fixed h-[5000px] w-[10000px] backdrop-blur-[50px] z-10'></div>
+      <div className='fixed h-[5000px] w-[10000px] backdrop-blur-[50px] z-10 pen'></div>
       <div ref={blob} className='mouseTrailer z-0'></div>
       <HeaderNavbar />
       <div className='text-white overflow-x-hidden ofys hs ws snapy snapman z-20 scrollBar'>
