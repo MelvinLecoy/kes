@@ -56,8 +56,6 @@
 }
 
 @layer components {
-     /* BgSquare.tsx */
-     .bgSquare {@apply abso border border-[#333333] mt-52}
      .heroBtn {
         @apply px-6 py-2 border border-[#242424] rfull uppercase text-xs 
                 tracking-widest text-gray-500 transition-all
@@ -78,6 +76,7 @@
      }
 }
 
+/* Mouse Trailer */
 @layer components {
      .mouseTrailer {
           background: linear-gradient(to right, aquamarine, mediumpurple);
@@ -97,7 +96,7 @@
           to {rotate: 360deg;}
      }
 }
-
+/* Main.tsx */
 @import url('https://fonts.googleapis.com/css?family=Ephesis');
 @layer components {
      .linksize {
@@ -135,7 +134,7 @@
      .llink:before {
           left: 0px;
           background: linear-gradient(
-               to right, transparent, 
+               to right, transparent,
                var(--g1), var(--g2), var(--trans), var(--g3)
           );
      }
@@ -146,4 +145,7 @@
                var(--g1), var(--g2), var(--trans), var(--g3)
           );
      }
+
+     /* BgSquare.tsx */
+     .bgSquare {@apply abso border border-[#333333] mt-52}
 }
