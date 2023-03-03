@@ -20,10 +20,7 @@ function HeaderNavbar() {
             </a>
         </motion.div>
         <motion.div initial={lInit} animate={end} transition={{duration: 1.5,}} className="fic fr">
-            {/* <p className="uppercase hidden md:ilf text-sm text-gray-400">Contact Me</p> */}
-            <a href="/" className="fjcic h-[50px] w-[70px] text-[#808080]">
-                <HomeIcon className="w-[30px] h-[30px]"/>
-            </a>
+            <a href="/kes" className="fjcic h-[50px] w-[70px] text-[#808080]"><HomeIcon className="w-[30px] h-[30px]"/></a>
         </motion.div>
     </header>
   )
