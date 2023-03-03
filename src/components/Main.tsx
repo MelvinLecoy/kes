@@ -1,7 +1,7 @@
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BgSquare from "./BgSquare";
 import Profile from "../assets/PfP3.0.png";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 function Main() {
   // const personalTraits: string[] = ["const [hobby, setHobby] = useState('Pool');"];
