@@ -136,14 +136,14 @@
           left: 0px;
           background: linear-gradient(
                to right, transparent, 
-               var(--g1), var(--g2), var(--g3)
+               var(--g1), var(--g2), var(--trans), var(--g3)
           );
      }
      .rlink:before {
           right: 0px;
           background: linear-gradient(
                to left, transparent, 
-               var(--g1), var(--g2), var(--g3)
+               var(--g1), var(--g2), var(--trans), var(--g3)
           );
      }
 }
