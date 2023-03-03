@@ -1,3 +1,4 @@
+import { DocumentTextIcon, HomeIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
 
@@ -13,13 +14,17 @@ function HeaderNavbar() {
             <SocialIcon url={Github} target="_blank" fgColor="gray" bgColor="transparent" />
             <SocialIcon url={Linkedin} target="_blank" fgColor="gray" bgColor="transparent" />
             <SocialIcon url={Spotify} target="_blank" fgColor="gray" bgColor="transparent" />
+            <SocialIcon network="email" url="#contact" fgColor="gray" bgColor="transparent" />
+            <a href={require("../assets/PfP1.0.png")} target="_blank" className="fjcic h-[50px] w-[50px] text-[#808080]" rel="noreferrer">
+                <DocumentTextIcon className="w-[25px] h-[30px]"/>
+            </a>
         </motion.div>
-        {/* <Link href="#contact"> */}
-          <motion.div initial={lInit} animate={end} transition={{duration: 1.5,}} className="fic fr text-gray-300 cp">
-              <SocialIcon className="cp" network="email" fgColor="gray" bgColor="transparent" />
-              <p className="uppercase hidden md:ilf text-sm text-gray-400">Get In Touch</p>
-          </motion.div>
-        {/* </Link> */}
+        <motion.div initial={lInit} animate={end} transition={{duration: 1.5,}} className="fic fr">
+            {/* <p className="uppercase hidden md:ilf text-sm text-gray-400">Contact Me</p> */}
+            <a href="/" className="fjcic h-[50px] w-[70px] text-[#808080]">
+                <HomeIcon className="w-[30px] h-[30px]"/>
+            </a>
+        </motion.div>
     </header>
   )
 }

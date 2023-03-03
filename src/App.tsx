@@ -1,6 +1,6 @@
 import './globals.css';
 import { HeaderNavbar, Main, About, Experience, Skills, Projects, Contact } from './components';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 function App() {
   const blob = useRef<HTMLDivElement>(null);
@@ -8,6 +8,8 @@ function App() {
     blob.current?.animate({left: `${e.clientX}px`, top: `${e.clientY}px`},
                           {duration: 3000, fill: "forwards"});
   };
+
+  useEffect(() => window.scrollTo(0, document.body.scrollHeight), []);  //Stays at bottom of first page when clicking the home icon
 
   return (
     <div onMouseMove={trailing} className='bg-[rgb(29,29,31)] rela'>
