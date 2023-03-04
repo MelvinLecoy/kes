@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import logo from "../assets/TMD Logo.png";
+import logo from "../assets/images/Experience/TMD.png";
 
 type Props = {}
 

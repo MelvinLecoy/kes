@@ -1,30 +1,27 @@
 import { motion } from "framer-motion";
-import AboutPic from "../assets/About.png";
+import AboutPic from "../assets/images/About/About.png";
+import SpreadEffect from "./SpreadEffect";
+import aboutList from "../assets/data/aboutlist.json"
+import CardDeck from "./CardDeck";
 
 export default function About() {
-    const init = {x: -200, opacity: 0,}, end = {x: 0, opacity: 1,};
   return (
-    <motion.div initial={{opacity: 0,}} whileInView={{opacity: 1,}} transition={{duration: 1.5}}
-                className='pageDiv md:fr md:tl max-w-7xl px-10 z-20'>
-        <h3 className='titleStyle'>About</h3>
-        <motion.img initial={init} whileInView={end} transition={{duration: 1.2,}} viewport={{once: true,}}
-            src={AboutPic} alt="About Page" className="h-60 w-60 md:w-[350px] md:h-[450px] xl:w-[400px] xl:h-[500px]
-                                                        fs0 rela top-20 md:-top-3 rfull md:rlg objcov" />
-        <div className="space-y-10 px-0 md:px-10">
-            <h4 className="font-semibold underline text-5xl xl:text-[50px]">Kestino (He/Him)</h4>
-            <ul className="list-disc ml-4 tl text-[18px] xl:text-[23px]">
-                <li>Hong Kong based</li>
-                <li>CS @ University of Michigan</li>
-                <li>Been coding for 5+ years</li>
-                <li>Full stack development</li>
-                <li>Strong self-learner</li>
-                <li>Incredible work ethic</li>
-                <li>Pool Enthusiast</li>
-                <li>Interested in Stock/Crypto</li>
-                <li>Long Live Juice WRLD</li>
-                <li>Live to Learn, Learn to Live</li>
-            </ul>
-        </div>
-    </motion.div>
+  <motion.div initial={{opacity: 0,}} whileInView={{opacity: 1,}} transition={{duration: 1.5}}
+              className='pageDiv z-20'>
+    <SpreadEffect title="About" />
+    <div className="fjbic fc ws 2xl:fr 2xl:fjevenic h-[83%]">
+      <CardDeck />
+      <div className="2xl:ml-60">
+        <h4 className="font-semibold underline mb-2 text-[40px] 2xl:text-[50px]">Kestino (He/Him)</h4>
+        <ul className="list-disc tl ml-4 space-y-[6px] text-[20px] xl:text-[21px] 2xl:text-[24px]
+                                                      pb-40 sm:pb-20 min-[830px]:pb-16 xl:pb-14 2xl:pb-48">
+          {aboutList.map((list, idx) => <li key={idx}>{list}</li>)}
+        </ul>
+      </div>
+    </div>
+  </motion.div>
   )
 }
+
+
+// className="h-60 w-60 md:w-[325px] md:h-[425px] xl:w-[400px] xl:h-[500px] fs0 rela rlg objcov w-full"
