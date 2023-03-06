@@ -3,6 +3,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import SpreadEffect from "./SpreadEffect";
 import contact from "../assets/data/contactlist.json";
 import ContactInfo from "./ContactInfo";
+import SparklingText from "./SparklingText";
 
 type Inputs = {
   name: string,
@@ -19,7 +20,7 @@ function Contact() {
     <div className='pageDiv jc z-20'>
       <SpreadEffect title="Contact" />
       <div className='fjcic fc space-y-10 mr-2'>
-        <h4 className='text-4xl font-semibold w-full'>I've got just what you want. HMU @</h4>
+        <h4 className='text-4xl font-semibold w-full'>I've got just what you want. <SparklingText text="HMU @"/></h4>
         <div className="fc fjcis max-[889px]:space-y-9 m890">
           <div className="space-y-9 min-[890px]:space-y-12">
             <ContactInfo icon={<PhoneIcon />} info={contact.phone} />
