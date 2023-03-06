@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import SpreadEffect from "./SpreadEffect";
-import aboutList from "../assets/data/aboutlist.json";
+import { SpreadEffect } from "../GeneralPieces";
+import aboutList from "../../assets/data/aboutlist.json";
 import CardDeck from "./CardDeck";
 
 type event = React.MouseEvent<HTMLHeadingElement, MouseEvent> | React.MouseEvent<HTMLLIElement, MouseEvent>;
@@ -36,5 +36,3 @@ function About() {
 }
 
 export default About;
-
-// className="h-60 w-60 md:w-[325px] md:h-[425px] xl:w-[400px] xl:h-[500px] fs0 rela rlg objcov w-full"

@@ -15,7 +15,7 @@ function HeaderNavbar() {
             <SocialIcon url={Linkedin} target="_blank" fgColor="gray" bgColor="transparent" />
             <SocialIcon url={Spotify} target="_blank" fgColor="gray" bgColor="transparent" />
             <SocialIcon network="email" url="#contact" fgColor="gray" bgColor="transparent" />
-            <a href={require("../assets/images/ProfilePic/1.0.png")} target="_blank" className="fjcic h-[50px] w-[50px] text-[#808080]" rel="noreferrer">
+            <a href={require("../../assets/images/ProfilePic/1.0.png")} target="_blank" className="fjcic h-[50px] w-[50px] text-[#808080]" rel="noreferrer">
                 <DocumentTextIcon className="w-[25px] h-[30px]"/>
             </a>
         </motion.div>

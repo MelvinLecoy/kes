@@ -1,6 +1,6 @@
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BgSquare from "./BgSquare";
-import Profile from "../assets/images/ProfilePic/3.0.png";
+import Profile from "../../assets/images/ProfilePic/3.0.png";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 

@@ -1,9 +1,8 @@
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import { SubmitHandler, useForm } from "react-hook-form";
-import SpreadEffect from "./SpreadEffect";
-import contact from "../assets/data/contactlist.json";
+import { SpreadEffect, SparklingText } from "../GeneralPieces";
+import contact from "../../assets/data/contactlist.json";
 import ContactInfo from "./ContactInfo";
-import SparklingText from "./SparklingText";
 
 type Inputs = {
   name: string,
