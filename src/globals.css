@@ -17,6 +17,7 @@
      .fjeic {@apply flex justify-end items-center} .fjeis {@apply flex justify-end items-start} .fjeie {@apply flex justify-end items-end}
      .fjbic {@apply flex justify-between items-center} .fjbis {@apply flex justify-between items-start} .fjbie {@apply flex justify-between items-end}
      .fjevenic {@apply flex justify-evenly items-center} .fjevenis {@apply flex justify-evenly items-start} .fjevenie {@apply flex justify-evenly items-end}
+     .fjardic {@apply flex justify-around items-center} .fjardis {@apply flex justify-around items-start} .fjardie {@apply flex justify-around items-end}
 
 
      .js {@apply justify-start} .je {@apply justify-end} .jc {@apply justify-center} .jb {@apply justify-between} .jeven {@apply justify-evenly} .jard {@apply justify-around}  /* Primary axis */
@@ -99,28 +100,28 @@
 }
 
 /* Main.tsx */
-@import url('https://fonts.googleapis.com/css?family=Ephesis');
+@import url('https://fonts.googleapis.com/css?family=Andika');
 @layer components {
-     .linksize {
-          font-family: 'Ephesis', cursive;   /* font-family: 'StudioFeixenSansEdgy', 'sans-serif'; */
+     .links {
+          font-family: 'Andika', cursive;   /* font-family: 'StudioFeixenSansEdgy', 'sans-serif'; */
           /* border: 1px solid rgba(255, 255, 255, 0.5); */
-          @apply text-[21px] md:text-[24px] lg:text-[27px] xl:text-[30px]
-                 w-[173px] min-[820px]:w-[200px] min-[910px]:w-[220px] lg:w-[240px] xl:w-[315px] 2xl:w-[440px]
+          @apply text-[24px] z-20 fjc fc hs ws pr-4 border-white font-semibold
+                 /* w-[173px] min-[820px]:w-[200px] min-[910px]:w-[220px] lg:w-[240px] xl:w-[315px] 2xl:w-[440px] */
      }
      /* @media only screen and (min-width: 820px) {
           .linksize {width: 200px;}
      } */
      .link {
           position: relative;
-          padding: 5px 20px;          
-          @apply h-[40px] md:h-[50px] lg:h-[60px] xl:h-[67px] 2xl:h-[80px] border-t-2
+          padding: 5px 20px;
+          @apply h-[70px] border-t z-20 fic
      }
 
      :root {
-          --g1: rgba(80, 145, 116, 0.5);
-          /* --g1.5: rgba(101, 189, 123, 0.9); */
-          --g2: rgba(141, 255, 168, 0.9);
-          --g3: rgba(228, 254, 62, 0.9);
+          --g1: rgba(80, 145, 116, 0.9);
+          --g4: rgba(101, 189, 123, 0.9);
+          --g2: rgb(141, 255, 168);
+          --g3: rgb(238, 254, 62);
       }
      .link:before {
           content: "";
@@ -137,25 +138,25 @@
           left: 0px;
           background: linear-gradient(
                to right, transparent,
-               var(--g1), var(--g2), var(--trans), var(--g3)
+               var(--g1), var(--g4), var(--g2), var(--trans), var(--g3)
           );
      }
      .rlink:before {
           right: 0px;
           background: linear-gradient(
                to left, transparent, 
-               var(--g1), var(--g2), var(--trans), var(--g3)
+               var(--g1), var(--g4), var(--g2), var(--trans), var(--g3)
           );
      }
 
      /* BgSquare.tsx */
-     .bgSquare {@apply abso border border-[#333333] mt-52}
+     .bgSquare {@apply abso border border-[#333333] pen}
 }
 
 /* About.tsx */
 @layer components {
      .aboutTextSize {@apply text-[20px] xl:text-[21px] 2xl:text-[24px]}
-     .aboutpb {@apply pb-40 sm:pb-20 min-[830px]:pb-16 xl:pb-14 2xl:pb-48}
+     .aboutpb {@apply pb-32 sm:pb-16 min-[830px]:pb-10 xl:pb-6 2xl:pb-48}
 }
 /* SpreadEffect.tsx */
 @layer components {

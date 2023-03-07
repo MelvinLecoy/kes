@@ -10,43 +10,44 @@ function Main() {
                                     "const [hobby, setHobby] = useState('Pool');", "<LoveWebDevMoreTho />"];
   const [text, count] = useTypewriter({words: personalTraits, loop: true, delaySpeed: 2000,});
 
-  const about = useRef<HTMLAnchorElement>(null), exp = useRef<HTMLAnchorElement>(null);
-  const skills = useRef<HTMLAnchorElement>(null), projs = useRef<HTMLAnchorElement>(null);
+  const about = useRef<HTMLAnchorElement>(null), contact = useRef<HTMLAnchorElement>(null);
+  const expskills = useRef<HTMLAnchorElement>(null), projs = useRef<HTMLAnchorElement>(null);
   const adjust = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, upper: boolean) => {
-    const winW = window.innerWidth, denom = about.current?.offsetWidth; let perc = 68;
-    const left: boolean = e.clientX < winW / 2;
-    (left) ? perc += 30 * (e.clientX / denom!) : perc += 30 * ((winW - e.clientX) / denom!);
-    (upper ? (left ? about : skills) : (left ? exp : projs)).current?.style.setProperty("--trans", `${perc}%`);
+    const winW = window.innerWidth, winH = window.innerHeight, denom = about.current?.offsetWidth; let perc = 70;
+    const top: boolean = e.clientY < winH / 2;
+    perc += 30 * ((top ? e.clientX : (winW - e.clientX)) / denom!);
+    (top ? (upper ? about : contact) : (upper ? expskills : projs)).current?.style.setProperty("--trans", `${perc}%`);
   };
 
   const lInit = {x: -200, opacity: 0,}, rInit = {x: 200, opacity: 0,};
   const end = {x: 0, opacity: 1,};
   return (
-    <div className="fjbic">
-      <motion.div initial={lInit} whileInView={end} transition={{duration: 1.5}}
-          className="linksize z-30 fjc fc hs border-white">
-        <a href="#about" ref={about} onMouseMove={e => adjust(e, true)} className="link llink w-full fjsic z-30 border-r-2">about</a>
-        <a href="#experience" ref={exp} onMouseMove={e => adjust(e, false)} className="link llink w-full fjsic z-30 border-b-2 border-r-2">experience</a>
+    <div className="rela fjardic fc hs space-y-24">
+      <motion.div initial={lInit} whileInView={end} transition={{duration: 1.5}} className="links">
+        <a href="#about" ref={about} onMouseMove={e => adjust(e, true)} className="link llink js">about</a>
+        <a href="#contact" ref={contact} onMouseMove={e => adjust(e, false)} className="link llink js border-b">contact</a>
       </motion.div>
-      <div className="fjcic fc hs space-y-8 tc">
+      <div className="rela fjcic fc hs ws tc pen">
           <BgSquare />
-          <img src={Profile} alt="pfp" className="rela h-36 w-36 mx-auto mt-20 rlg objcov z-20" />
-          <div className="z-20">
-              <h2 className="uppercase text-gray-500 pb-2 tracking-[15px] text-sm lg:text-lg">Software Engineer</h2>
-              <h1 className="text-[15px] md:text-[20px] min-[910px]:text-[23px] lg:text-[27px] font-semibold">
+          <div className="rela pen">
+            <div className="fjcic ws h-[144px]">
+              <img src={Profile} alt="pfp" className="abso h-36 w-36 mx-auto rlg objcov z-20" />
+            </div>
+            <div className="abso ws z-20 top-44">
+              <h2 className="uppercase text-gray-500 pb-2 tracking-[15px] text-sm md:text-base lg:text-lg">Software Engineer</h2>
+              <h1 className="text-[19px] md:text-2xl xl:text-[27px] font-semibold">
                   <span className="mr-1">{text}</span>
                   <Cursor cursorColor="#F7AB0A"/>
               </h1>
+            </div>
           </div>
       </div>
-      <motion.div initial={rInit} whileInView={end} transition={{duration: 1.5}}
-          className="linksize z-30 fjc fc hs pr-4 border-white">
-        <a href="#skills" ref={skills} onMouseMove={e => adjust(e, true)} className="link rlink w-full fjeic z-30 border-l-2">skills</a>
-        <a href="#projects" ref={projs} onMouseMove={e => adjust(e, false)} className="link rlink w-full fjeic z-30 border-b-2 border-l-2">projects</a>
+      <motion.div initial={rInit} whileInView={end} transition={{duration: 1.5}} className="links">
+        <a href="#expskills" ref={expskills} onMouseMove={e => adjust(e, true)} className="link rlink je">experience & skills</a>
+        <a href="#projects" ref={projs} onMouseMove={e => adjust(e, false)} className="link rlink je border-b">projects</a>
       </motion.div>
     </div>
-    
   )
 }
 
-export default Main
+export default Main;

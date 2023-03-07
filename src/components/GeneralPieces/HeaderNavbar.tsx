@@ -9,8 +9,8 @@ function HeaderNavbar() {
     const Linkedin: string = "https://www.linkedin.com/in/kestinoktlau/";
     const Spotify: string = "https://open.spotify.com/user/uncledrewchrislau";
   return (
-    <header className="fis jb sticky top-0 p-5 max-w-7xl mx-auto z-50 xl:ic">
-        <motion.div initial={rInit} animate={end} transition={{duration: 1.5,}} className="fic fr">
+    <header className="fixed ws xl:w-[1280px] fjbic top-0 p-5 mx-auto z-50">
+        <motion.div initial={rInit} animate={end} transition={{duration: 1.5,}} className="fjcic">
             <SocialIcon url={Github} target="_blank" fgColor="gray" bgColor="transparent" />
             <SocialIcon url={Linkedin} target="_blank" fgColor="gray" bgColor="transparent" />
             <SocialIcon url={Spotify} target="_blank" fgColor="gray" bgColor="transparent" />
@@ -19,8 +19,8 @@ function HeaderNavbar() {
                 <DocumentTextIcon className="w-[25px] h-[30px]"/>
             </a>
         </motion.div>
-        <motion.div initial={lInit} animate={end} transition={{duration: 1.5,}} className="fic fr">
-            <a href="/kes" className="fjcic h-[50px] w-[70px] text-[#808080]"><HomeIcon className="w-[30px] h-[30px]"/></a>
+        <motion.div initial={lInit} animate={end} transition={{duration: 1.5,}} className="fjcic">
+            <a href="/kes" className="fjcic h-[50px] w-[50px] text-[#808080] mr-3"><HomeIcon className="w-[30px] h-[30px]"/></a>
         </motion.div>
     </header>
   )
